@@ -7,13 +7,14 @@
   <div class="container">
     <div class="row">
       <div class="col-sm">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 15rem; height: 17rem;">
           <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="role" id="engineer" value="engineer" checked>
+              <input class="form-check-input" type="radio" name="role" id="engineer" value="engineer"
+                {{#if  (keep role 'engineer') }} checked {{/if}}>
               <label class="form-check-label" for="engineer">工程師</label>
             </div>
             </p>
@@ -22,13 +23,14 @@
       </div>
 
       <div class="col-sm">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 15rem; height: 17rem;">
           <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="role" id="designer" value="designer">
+              <input class="form-check-input" type="radio" name="role" id="designer" value="designer"
+                {{#if  (keep role 'designer') }} checked {{/if}}>
               <label class="form-check-label" for="designer">設計師</label>
             </div>
             </p>
@@ -37,14 +39,15 @@
       </div>
 
       <div class="col-sm">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 15rem; height: 17rem;">
           <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
             class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="role" id="entrepreneur" value="entrepreneur">
-              <label class="form-check-label" for="entrepreneur">創業家</label>
+              <input class="form-check-input" type="radio" name="role" id="entrepreneur" value="entrepreneur"
+                {{#if  (keep role 'entrepreneur') }} checked {{/if}}>
+              <label class="form-check-label" for="">創業家</label>
             </div>
             </p>
           </div>
@@ -60,7 +63,7 @@
     <div>
       <button class="btn btn-dark " type="submit">產生幹話</button>
       {{#if result}}
-      <span class="mr-2"></span>
+      <span></span>
       <div class="mt-2">{{result}}</span>
         {{/if}}
       </div>
